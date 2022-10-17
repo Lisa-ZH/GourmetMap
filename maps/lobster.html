@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta id="testViewport" name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta charset="UTF-8">
+<title>Gourmet Map of MA</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="files/fonts/cha-rust/MyFontsWebfontsKit.css">
+<link href="../files/styles/style.css" rel="stylesheet" type="text/css">
+<link href="../files/styles/responsive.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
+<script src="../files/js/script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"> 
+            <a href="https://www.gourmetmapma.com/">
+                <img src="../files/images/gourmet-map-logo.png" alt="Gourmet Map of MA logo" class="scalable">
+            </a>
+        </div>
+        <nav class="navMain">
+            <ul>
+                <li><a href="https://www.gourmetmapma.com/">HOME</a></li>
+                <li><a href="../contact.html">CONTACT US</a></li>
+                <li><a href="../donate.html">DONATE</a></li>
+            </ul>
+        </nav>
+        <!--
+        <div class="mobileDrawerToggle drawerToggle" data-for="globals-mobile" data-mobile="true"></div>
+        -->
+    </header>
+    <div class="banner-container">
+        <div class="bannerCopy">
+            <div class="banner-heading">
+                <h2>Gourmet Map of Massachusetts</h2>
+                <h2>麻州吃货地图</h2>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1j04Vc0xVP0nxsROzVhQDAIdgWjsy7mk&ehbc=2E312F" width="800" height="600"></iframe>
+        </div>
+    </main>
+    <footer>
+        Copyright <span>©</span> 
+    <script type="text/javascript">
+		date = new Date();
+        year = date.getFullYear();
+		document.write(year);//
+	</script>&nbsp; All rights reserved
+    </footer>
+    <!-- <script type="text/javascript">
+        date = new Date();
+        year = date.getFullYear();
+        document.getElementById('footer').innerHTML = '<p>Copyright &copy;' + year + '</p>';
+    </script> -->
+</body>
+</html>
