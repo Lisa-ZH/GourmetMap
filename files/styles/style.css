@@ -64,6 +64,8 @@ nav ul li a {
 	cursor: pointer;
 }
 h1{
+	width: 90%;
+	margin: 0 auto;
 	text-align: center;
 }
 h2{
