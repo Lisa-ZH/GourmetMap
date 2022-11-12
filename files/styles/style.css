@@ -21,89 +21,85 @@ a:link, a:active, a:visited {
 	color: #0077D4;
 	outline: none;
 	text-decoration: none;
-  }
-  a:hover {
+}
+a:hover {
 	color: #d32027;
 	text-decoration: none;
-  }
+}
 header{
 	position: relative;
 	border-top: 10px solid #28305B;
 	border-bottom: 10px solid #28305B;
 	padding: 15px 15px 15px 30px;
 }
+nav {
+    display: flex;
+    justify-content: space-around;
+}
 .logo{
 	width: 100px;
 	vertical-align: middle;
 }
-.navMain{
-	position: absolute;
-	top: 50%;
-	right: 30px;
-	transform: translateY(-50%);
+.menu-btn, .exit-btn {
+	display: none;
 }
-.navMain ul{
-	padding: 0;
+nav ul {
+    display: flex;
+    background-color: #ffffff;
+    padding-top: 1em;
+	padding-bottom: 0;
 	list-style: none;
+    transform: translateX(0);
+    transition: transform .3s;
 }
-.navMain ul li{
-	display: inline-block;
-	vertical-align: middle;
-	position: relative;
-}
-.navMain ul li a{
-	transition: all .5s ease-in-out;
-	position: relative;
-	z-index: 1;
+nav ul li a {
 	display: block;
-	overflow: hidden;
-	padding: 6px 15px;
-	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
-	color: #434343;
+	color: #28305B!important;
 	font-size: 1.1em;
+	font-weight: 600;
 	line-height: 1.2em;
+	padding: .4em 1.5em;
+	cursor: pointer;
 }
+h2{
+	margin-bottom: 0;
+}
+/*
 main{
 	background-image: url(../images/Watercolor_Background_tier.jpg);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
-}
+}*/
 .banner-container{
-	background-image: url(../images/Massachusetts-State-Map.jpg);
+	background-image: url(../images/Massachusetts-State-Map-opac-3.png);
 	background-position: top center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-top: 5%;
-	padding-bottom: 5%;
-  }
-  .banner-container .banner-heading{
+	background-color: #ffffff;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+.banner-container .banner-heading{
 	font-family: "IntroRustH2-Base", Arial, sans-serif !important;
-	font-size: 2em;
+	font-size: 1.6em;
 	line-height: 1.2em;
 	letter-spacing: 1px;
 	text-align: center;
 	color: #28305B;
-  }
-  /* .list-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-} */
+}
 .list-container{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	list-style: none;
-	width: 96%;
+	width: 90%;
 	margin: 0 auto;
-	padding: 20px 0 40px 0;
+	padding: 0 0 40px 0;
 	text-align: center;
 }
-
 .list-container .card{
 	width: 220px;
 	margin: 20px 20px 0 0;
