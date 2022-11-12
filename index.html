@@ -11,27 +11,26 @@
 <link href="files/styles/responsive.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
-<script src="files/js/script.js"></script>
 
 </head>
 
 <body>
     <header>
-        <div class="logo"> 
-            <a href="https://www.gourmetmapma.com/">
-                <img src="files/images/gourmet-map-logo.png" alt="Gourmet Map of MA logo" class="scalable">
-            </a>
-        </div>
-        <nav class="navMain">
+        <nav>
+            <div class="logo"> 
+                <a href="https://www.gourmetmapma.com/">
+                    <img src="files/images/gourmet-map-logo.png" alt="Gourmet Map of MA logo" class="scalable">
+                </a>
+            </div>
+        
+            <img src="files/images/menu.svg" class="menu-btn">
             <ul>
-                <li><a href="https://www.gourmetmapma.com/">HOME</a></li>
+                <li class="exit-btn"><img src="files/images/exit.svg"></li>
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="contact.html">CONTACT US</a></li>
                 <li><a href="donate.html">DONATE</a></li>
             </ul>
         </nav>
-        <!--
-        <div class="mobileDrawerToggle drawerToggle" data-for="globals-mobile" data-mobile="true"></div>
-        -->
     </header>
     <div class="banner-container">
         <div class="bannerCopy">
@@ -168,5 +167,6 @@
         year = date.getFullYear();
         document.getElementById('footer').innerHTML = '<p>Copyright &copy;' + year + '</p>';
     </script> -->
+    <script src="files/js/script.js"></script>
 </body>
 </html>
