@@ -89,6 +89,8 @@ main{
 	padding-bottom: 3%;
 }
 .banner-container .banner-heading{
+	width: 90%;
+	margin: 0 auto;
 	font-family: "IntroRustH2-Base", Arial, sans-serif !important;
 	font-size: 1.6em;
 	line-height: 1.2em;
