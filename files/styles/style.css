@@ -156,66 +156,484 @@ main{
 	padding: 30px 0;
 	text-align: center;
 }
-/*
-.list-container ul li::before{
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	background-position: top center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	transition: .35s all ease-out .05s;
+/* Contact */
+.contact-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #f6f6f6;
+    padding: 4em 2em;
 }
-.list-container ul li a{
-	outline: none;
-	text-decoration: none;
-	transition: all .2s ease-out;
+
+.contact-container .inner{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    color: #818181;
 }
-.list-container ul li .label{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	padding: 25px 0;
-	font-size: 1.1em;
-	line-height: 1.2em;
-	font-weight: 600;
-	color: rgb(67 120 147);
-	background-color: #fff;
-	transition: all .5s ease;
+.contact-container .map {
+    width: 50%;
 }
-.list-container ul li .label span{
-	display: block;
-	width: 88%;
-	transition: all .35s ease;
-	margin: 0 auto;
-	padding: 2%;
-	border: 1px solid #c7c2bc;
-	border-radius: 50px;
-}*/
-/* a.Btn:link, a.Btn:visited {
-	display: inline-block;
-	font-size: 1.2em;
-	line-height: 1.46667;
-	letter-spacing: 1px;
-	color: #ffffff !important;
-	background-color: #0071ce;
-	border-bottom: 5px solid #00559b;
-	padding: 10px 20px;
-	border-radius: 5px;
-	font-weight: 700 !important;
-	margin: 0px;
-	text-align: left;
-	transition: all .1s ease-in;
-  }
-  a.Btn:hover, a.Btn:focus, a.Btn:active {
-	text-decoration: none;
-	color: #ffffff !important;
-	background-color: #4095da;
-	border-color: #0071ce !important;
-  } */
+
+.contact-container .map iframe{
+    height: 100%;
+}
+.contact-container .contact-form {
+    width: 50%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26);
+    overflow: hidden;
+}
+
+.contact-form span {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+form {
+    position: relative;
+    width: 350px;
+}
+
+.form-group {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    display: block;
+    height: 36px;
+    width: 100%;
+    border: none;
+    border-radius: 0 !important;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 300;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.15);
+}
+
+.form-control:focus {
+    border-bottom: 2px solid rgb(3, 169, 245);
+    outline: none;
+    box-shadow: none;
+}
+
+.form-highlight {
+    position: absolute;
+    height: 60%;
+    width: 60px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.form-control:focus~.form-highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/*--  
+
+	Float Label  
+	
+--*/
+.float-label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 16px;
+    color: #999;
+    font-weight: 300;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.form-control:focus~.float-label,
+.form-control:valid~.float-label {
+    top: -15px;
+    font-size: 12px;
+}
+
+.float-label .star{
+    display: inline-block;
+    color: red;
+}
+
+.form-group erroru,
+.form-group errorp {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 38px;
+    font-size: 11px;
+    color: #d34336;
+    font-weight: 300;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) all;
+    -moz-transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) all;
+    -webkit-transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) all;
+    opacity: 0;
+}
+
+.form-group erroru i,
+.form-group errorp i {
+    position: absolute;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    float: right;
+}
+
+.form-group erroru i svg,
+.form-group errorp i svg {
+    fill: #d34336;
+}
+
+.form-group[errr] .float-label {
+    color: #d34336 !important;
+}
+
+.form-group[errr] .form-control {
+    border-bottom: 1px solid #d34336 !important;
+}
+
+.form-group[errr] .form-control:focus {
+    border-bottom: 2px solid #d34336 !important;
+}
+
+
+.errortext {
+    color: red;
+    font-size: 12px;
+    padding: 3px;
+}
+
+input[type=checkbox] {
+    display: none;
+    visibility: hidden;
+}
+
+input[type="checkbox"]+label {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+input[type="checkbox"]+label:before {
+    display: inline-block;
+    content: "";
+    margin: 0 15px 3px 0px;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 2px solid #5a5a5a;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+input[type=checkbox]:checked+label:before {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwcHgiIGhlaWdodD0iMTVweCIgdmlld0JveD0iMCAwIDIwIDE1Ij4NCjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iNy4xNDMsMTQuOTM4IDAsNy43OTYgMi4wMjEsNS43NzYgNy4xNDMsMTAuODk4IDE3Ljk3OSwwLjA2MiAyMCwyLjA4MiAiLz4NCjwvc3ZnPg0K');
+    background-color: rgb(3, 169, 245);
+    border-color: rgb(3, 169, 245);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: 11px auto;
+    -moz-background-size: 11px auto;
+    -o-background-size: 11px auto;
+    background-size: 11px auto;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+}
+
+button[type="submit"] {
+    position: relative;
+    float: right;
+    font-family: inherit;
+    font-weight: 100;
+    font-size: 15px;
+    border: 0;
+    margin: -3px 0px;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    background: rgb(3, 169, 245);
+    color: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    /* Could be more or less, depending on screen size */
+    font-size: 14px;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #464646;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* -- highlighter animation --------------------------- */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-webkit-keyframes user-head {
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+
+@-moz-keyframes user-head {
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+
+@keyframes user-head {
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes user-body {
+    100% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+        -moz-transform: translateY(2px);
+    }
+}
+
+@-moz-keyframes user-body {
+    100% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+        -moz-transform: translateY(2px);
+    }
+}
+
+@keyframes user-body {
+    100% {
+        -webkit-transform: translateY(2px);
+        transform: translateY(2px);
+        -moz-transform: translateY(2px);
+    }
+}
+
+/*--  
+
+	ripple (该登录界面中还使用了一个有趣的特效-点击波特效。当在按钮上点击的时候，
+	一个光圈从被点击的点开始，会像冲击波一样向外辐射。在HTML代码中，
+	每个带有点击波特效的元素都有一个自定义的属性ripple。)  
+	
+--*/
+[ripple] {
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: box-shadow .4s;
+    -moz-transition: box-shadow .4s;
+    -ms-transition: box-shadow .4s;
+    -o-transition: box-shadow .4s;
+    transition: box-shadow .4s;
+    cursor: inherit;
+}
+
+[ripple] .touch {
+    background: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    border-radius: 100%;
+}
+
+/* -------------------------------- 
+
+Footer
+
+-------------------------------- */
+footer {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: right;
+    padding: 30px 30px 30px 0;
+    background-color: #363636;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* -------------------------------- 
+
+Slide In Elements
+
+-------------------------------- */
+.slideanim {
+    visibility: hidden;
+}
+
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .login {
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .login {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
 footer{
 	width: 90%;
 	margin: 0 auto;

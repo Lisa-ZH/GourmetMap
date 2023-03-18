@@ -44,8 +44,62 @@
         </div>
     </div>
     <main>
-        <h1>Contact page</h1>
-        <h1>Coming Soon</h1>
+        <!-- Contact -->
+        <div id="contact" class="contact-container">
+            <!-- Form -->
+            <form id="contactform" class="contact-form" name="contact" method="post">
+                <span>Questions or Comments? Email Us</span>
+                <!-- First Name & Last Name -->
+                <!-- First Name -->
+                <div class="form-group">
+                    <input id="firstname" spellcheck=false class="form-control" name="firstname" type="text" size="18"
+                        alt="login" required="">
+                    <span class="form-highlight"></span>
+                    <span class="form-bar"></span>
+                    <label for="firstname" class="float-label">First Name <div class="star">*</div></label>
+                    <div id="errfirstname" class="errortext"></div>
+                </div>
+                <!-- Last Name -->
+                <div class="form-group">
+                    <input id="lastname" spellcheck=false class="form-control" name="lastname" type="text" size="18"
+                        alt="login" required="">
+                    <span class="form-highlight"></span>
+                    <span class="form-bar"></span>
+                    <label for="lastname" class="float-label">Last Name <div class="star">*</div></label>
+                    <div id="errlastname" class="errortext"></div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <input id="email" spellcheck=false class="form-control" name="email" type="text" size="18"
+                        alt="login" required="">
+                    <span class="form-highlight"></span>
+                    <span class="form-bar"></span>
+                    <label for="email" class="float-label">Email <div class="star">*</div></label>
+                    <div id="erremail" class="errortext"></div>
+                </div>
+                <!-- Comment -->
+                <div class="form-group">
+                    <label for="subject">Message</label>
+                    <span class="form-highlight"></span>
+                    <span class="form-bar"></span>
+                    <textarea id="comment" name="comment" placeholder="Your Comment.." style="height:200px"></textarea>
+                    <div id="errcomment" class="errortext"></div>
+                </div>
+
+                <div class="form-group">
+                    <button id="submit" type="submit" ripple>Submit</button>
+                </div>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p id="info"></p>
+                    </div>
+                </div>
+            </form>
+        </div>
     </main>
     <footer>
         Copyright <span>©</span> 
@@ -53,7 +107,7 @@
 		date = new Date();
         year = date.getFullYear();
 		document.write(year);//
-	</script>&nbsp; All rights reserved
+	</script>&nbsp; Gourmet map of MA. All rights reserved.
     </footer>
     <!-- <script type="text/javascript">
         date = new Date();
